@@ -1,7 +1,7 @@
 angular.module('userProfiles')
     .service('mainService', function(){
 
-var data = [
+this.data = [
     {
     "id": 0,
     "first_name": "george",
@@ -22,7 +22,9 @@ var data = [
     }
 ];
 
-
+this.getUsers = function(){
+    return this.data;
+}
 
 
     });
