@@ -8,19 +8,19 @@
 
 <body ng-controller="MainController">
     
-    {{thisAppIsBroken}}
+    <!--{{thisAppIsBroken}}-->
 
-<div class='userList' ng-repeat='user in users'>{{ user.first_name }} {{user.last_name}}</div>
-
-
-
-
-
-
-
-
-
-
+<!--ng-class uses what's inside the curly braces to evaluate the
+class. If what is on the right is true, then what is on the left
+gets added as a class. Down below, we have a button that runs a 
+function. the function toggles if 'isFavorite' is true or not,
+effectively turning on and of this class 'favorite'.-->
+    <div ng-repeat="user in users" ng-class="{favorite: user.isFavorite}">
+        <img ng-src="{{user.avatar}}"></img>
+        <span>{{user.first_name}}</span>
+        <span>{{user.last_name}}</span>
+        <button ng-click="toggleFavorite(user.id)">+</button>
+    </div>
 
 
     

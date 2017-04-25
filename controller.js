@@ -2,13 +2,13 @@ angular.module('userProfiles').controller('MainController', function($scope, mai
     
     $scope.thisAppIsBroken = "This angular app is working";
 
-    $scope.getUsersScope = function(){
+    $scope.getUsers = function(){
         $scope.users = mainService.getUsers();
     }
 
-    $scope.getUsersScope();
+    $scope.getUsers();
 
-
+    $scope.toggleFavorite = mainService.toggleFavorite;
 
 
    

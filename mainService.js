@@ -1,7 +1,14 @@
 angular.module('userProfiles')
     .service('mainService', function(){
 
-this.data = [
+//var data makes this variable private. only accessible through
+//funtions that I create. Down below, i have a function that 
+//returns the data variable.  NOW, if I put this variable as
+//this.data instead of var data, anyone could access it, but
+//I would also have to change my function down below to say
+//return this.data, since it would then only be accessible through
+//the object 'this'
+var data = [
     {
     "id": 0,
     "first_name": "george",
@@ -23,8 +30,15 @@ this.data = [
 ];
 
 this.getUsers = function(){
-    return this.data;
+    return data;
 }
+
+this.toggleFavorite = function(index){
+    data[index].isFavorite = !data[index].isFavorite;
+}
+
+
+
 
 
     });

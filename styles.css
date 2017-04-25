@@ -3,10 +3,16 @@
 }
 
 .userList{
-    width: 150px;
-    height: 20px;
+    width: 200px;
+    height: 25px;
     border: 1px solid black;
-    text-align: center;
+    padding: 3px 0px 0 15px;
+    position: relative;
+}
+
+.userList button{
+    position: absolute;
+    right: 2px;
 }
 
 
